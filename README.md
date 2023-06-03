@@ -330,9 +330,373 @@ open .
 
 </details>
 
+---
+
+<details>
+
+<summary>df  : Used to check tha available disk space </summary>
+
+<p>
+
+**Syntax:**
+
+```console
+
+df -h
+```
+
+**It will display the available disk space in human readable format**
+
+**Example**
+
+![df](img/df.png)
+
+</p>
+
+</details>
+
+---
+
+<details>   
+
+<summary>du  : Used to check tha size of a file or directory </summary>
+
+<p>
+
+**Syntax:**
+
+```console
+
+du -sh <file_name>
+```
+
+**It will display the size of file <file_name> in human readable format**
+
+```console
+
+du -sh <directory_name>
+```
+
+**It will display the size of directory <directory_name> in human readable format**
+
+**Example**
+
+![du](img/du.png)
+
+</p>
+
+</details>
+
 
 ## Intermediate Linux Commands
 
+<details>
+
+<summary>grep: search for a string in a file</summary>
+
+<p>
+
+**Syntax:**
+
+```console
+grep <string> <file_name>
+```
+
+**It will search for string <string> in file <file_name>**
+
+```console  
+grep -i <string> <file_name>
+```
+
+**It will search for string <string> in file <file_name> ignoring case**
+
+```console
+
+grep -r <string> <directory_name>
+```
+
+**It will search for string <string> in directory <directory_name>**
+
+```console
+
+grep -v <string> <file_name>
+```
+
+**It will search for string <string> in file <file_name> and display lines which do not contain string <string>**
+
+```console
+
+grep -c <string> <file_name>
+```
+
+**It will search for string <string> in file <file_name> and display number of lines which contain string <string>**
+
+```console
+
+
+grep -n <string> <file_name>
+```
+
+**It will search for string <string> in file <file_name> and display line number of lines which contain string <string>**
+
+```console
+
+grep -w <string> <file_name>
+```
+
+
+**It will search for string <string> in file <file_name> and display lines which contain string <string> as a word**
+
+```console
+
+grep -A <number> <string> <file_name>
+```
+
+**It will search for string <string> in file <file_name> and display <number> lines after the line which contains string <string>**
+
+```console
+
+grep -B <number> <string> <file_name>
+```
+
+
+**It will search for string <string> in file <file_name> and display <number> lines before the line which contains string <string>**
+
+```console
+
+grep -C <number> <string> <file_name>
+```
+
+**It will search for string <string> in file <file_name> and display <number> lines before and after the line which contains string <string>**
+
+Example:
+
+![grep](img/grep.png)
+
+</p>
+
+</details>
+
+---
+
+<details>
+
+<summary>chmod: change file permissions</summary>
+
+<p>
+
+**To find the permission of a file or directory, use `ls -l`**
+
+![access](img/access.png)
+
+**`-rw-r--r--` is the permission of the file.**
+
+**`-rw-` is the permission of the owner of the file.**
+
+**`r--` is the permission of the group of the file.**
+
+**`r--` is the permission of the others.**
+
+**`r` means read permission.**
+
+**`w` means write permission.**
+
+**`x` means execute permission.**
+
+**`-` means no permission.**
+
+**r (read): 4**
+**w (write): 2**
+**x (execute): 1**
+**- (no permission): 0**
+
+**Syntax:**
+
+```console
+chmod <permission> <file_name>
+```
+
+**It will change the permission of file <file_name> to <permission>**
+
+```console
+
+chmod 777 <file_name>
+```
+
+**It will change the permission of file <file_name> to 777(all the access for all the users)**
+
+```console
+
+chmod 644 <file_name>
+```
+
+**It will change the permission of file <file_name> to 644(read and write access for owner and read access for group and others)**
+
+**Example**
+
+![chmod](img/chmod.png)
+
+</p>
+
+</details>
+
+---
+
+<details>
+
+<summary>find: find files and directories</summary>
+
+<p>
+
+**Syntax:**
+
+```console
+find <directory_name> -name <file_name>
+```
+
+**It will search for file <file_name> in directory <directory_name>**
+
+```console
+
+find <directory_name> -iname <file_name>
+```
+
+**It will search for file <file_name> in directory <directory_name> ignoring case**
+
+```console
+
+
+find <directory_name> -type f
+```
+
+**It will search for files in directory <directory_name>**
+
+```console
+
+find <directory_name> -type d
+```
+
+**It will search for directories in directory <directory_name>**
+
+```console
+
+find <directory_name> -empty
+```
+
+**It will search for empty files and directories in directory <directory_name>**
+
+```console
+
+find <directory_name> -perm 777
+```
+
+**It will search for files and directories with permission 777 in directory <directory_name>**
+
+```console
+
+find <directory_name> -perm 777 -exec chmod 644 {} \;
+```
+
+**It will search for files and directories with permission 777 in directory <directory_name> and change their permission to 644**
+
+```console
+
+find <directory_name> -perm 777 -exec rm -rf {} \;
+```
+
+**It will search for files and directories with permission 777 in directory <directory_name> and remove them forcefully**
+
+```console
+
+find <directory_name> -perm 777 -exec cp -r {} <directory_name2> \;
+```
+
+**It will search for files and directories with permission 777 in directory <directory_name> and copy them to directory <directory_name2>**
+
+```console
+
+find <directory_name> -perm 777 -exec mv {} <directory_name2> \;
+```
+
+**It will search for files and directories with permission 777 in directory <directory_name> and move them to directory <directory_name2>**
+
+```console
+
+find <directory_name> -perm 777 -exec grep -i <string> {} \;
+```
+
+**It will search for files and directories with permission 777 in directory <directory_name> and search for string <string> in them**
+
+```console
+
+find <directory_name> -perm 777 -exec grep -i <string> {} \; -exec rm -rf {} \;
+```
+
+**It will search for files and directories with permission 777 in directory <directory_name> and search for string <string> in them and remove them forcefully**
+
+**`-exec` is an option that indicates that a command should be executed on each matching file.**
+
+**`{}` is a placeholder for the current file name.**
+
+**`\;` is a separator indicating the end of the command, like ; in bash.**
+
+Example:
+
+![find](img/find.png)
+
+</p>
+
+</details>
+
+---
+
+<details>
+
+<summary>tr : Used to translate characters </summary>
+
+<p>
+
+**Syntax:**
+
+```console
+
+tr 'a-z' 'A-Z'
+```
+
+**It will translate all the characters from 'a' to 'z' to 'A' to 'Z'**
+
+```console
+
+tr -d 'a-z'
+```
+
+**It will delete all the characters from 'a' to 'z'**
+
+```console
+
+
+tr -d 'a-z' < file_name
+```
+
+**It will delete all the characters from 'a' to 'z' from file <file_name>**
+
+```console
+
+tr -d 'a-z' < file_name > file_name2
+```
+
+**It will delete all the characters from 'a' to 'z' from file <file_name> and save the output in file <file_name2>**
+
+
+**Example**
+
+![tr](img/tr.png)
+
+</p>
+
+</details>
+
+---
 
 
 

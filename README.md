@@ -551,6 +551,12 @@ chmod 644 <file_name>
 **Syntax:**
 
 ```console
+find . -name <file_name>
+```
+
+**It will search for file <file_name> in current directory**
+
+```console
 find <directory_name> -name <file_name>
 ```
 

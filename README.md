@@ -551,6 +551,12 @@ chmod 644 <file_name>
 **Syntax:**
 
 ```console
+find . -name <file_name>
+```
+
+**It will search for file <file_name> in current directory**
+
+```console
 find <directory_name> -name <file_name>
 ```
 
@@ -697,6 +703,223 @@ tr -d 'a-z' < file_name > file_name2
 </details>
 
 ---
+
+<details>
+
+<summary>head: Used to print top n number of lines for given input </summary>
+
+<p>
+
+**Syntax:**
+
+```console
+
+head <file_name>
+```
+
+**It will print top 10 lines of file <file_name>**
+
+```console
+
+head -n <number> <file_name>
+```
+
+**It will print top <number> lines of file <file_name>**
+
+```console
+
+head -n <number> <file_name> > <file_name2>
+```
+
+**It will print top <number> lines of file <file_name> and save the output in file <file_name2>**
+
+**Example**
+
+![head](img/head.png)
+
+</p>
+
+</details>
+
+---
+
+<details>
+
+<summary>tail: Used to print last n number of lines for given input </summary>
+
+<p>
+
+**Syntax:**
+
+```console
+
+tail <file_name>
+```
+
+**It will print last 10 lines of file <file_name>**
+
+```console
+
+tail -n <number> <file_name>
+```
+
+**It will print last <number> lines of file <file_name>**
+
+```console
+
+tail -n <number> <file_name> > <file_name2>
+```
+
+**It will print last <number> lines of file <file_name> and save the output in file <file_name2>**
+
+**Example**
+
+![tail](img/tail.png)
+
+</p>
+
+</details>
+
+---
+
+<details>
+
+<summary>diff is used to display the differences in the files by comparing the files line by line</summary>
+
+<p>
+
+**Syntax:**
+
+```console
+
+diff <file_name1> <file_name2>
+``` 
+
+**It will display the differences in the files <file_name1> and <file_name2>**
+
+```console
+
+diff -y <file_name1> <file_name2>
+```
+
+**It will display the differences in the files <file_name1> and <file_name2> side by side**
+**Example**
+
+![diff](img/diff.png)
+
+</p>
+
+</details>
+
+---
+
+<details>
+
+<summary>history: history command is used to view previously executed commands</summary>
+
+<p>
+
+**Syntax:**
+
+```console
+
+history
+```
+    
+**It will display all the previously executed commands**
+
+```console
+
+history | grep <string>
+```
+
+</p>
+
+</details>
+
+---
+
+<details>
+
+<summary>alias: used to add alias to commands</summary>
+
+<p>
+
+**Syntax:**
+
+```console
+
+alias <alias_name>='<command>'
+```
+
+**It will add alias <alias_name> to command <command>**
+
+```console
+
+alias <alias_name>='<command>' >> ~/.bashrc
+```
+
+**It will add alias <alias_name> to command <command> in file ~/.bashrc**
+
+**Example**
+
+![alias](img/alias.png)
+
+</p>
+
+</details>
+
+---
+
+<details>
+
+<summary> wget : Used to download teh files from teh server</summary>
+
+
+<p>
+
+**Syntax:**
+
+```console
+
+wget <url>
+```
+
+**It will download the file from the url <url>**
+
+```console
+
+wget -O <file_name> <url>
+```
+
+**It will download the file from the url <url> and save it as <file_name>**
+
+```console  
+
+wget -O <file_name> <url> -q
+```
+
+**It will download the file from the url <url> and save it as <file_name> and will not display any output**
+
+```console
+
+wget -b <url>
+```
+
+**It will download the file from the url <url> in background**
+
+```console
+
+wget -c <url>
+```
+
+**It will download the file from the url <url> and will resume the download if it is interrupted**
+
+</p>
+
+</details>
+
+
 
 
 

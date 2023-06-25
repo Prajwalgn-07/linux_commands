@@ -1,10 +1,13 @@
 # linux_commands
 
+![linux](img/linux.png)
+
+
 ## Beginner Linux Commands
 
 <details>
 
-<summary>mkdir : Used to make directory</summary>
+<summary>1. mkdir : Used to make directory</summary>
 <p>
 
 **Syntax:**
@@ -32,7 +35,7 @@ Example:
 ---
 
 <details>
-<summary>ls : Used to list all files and directories</summary>
+<summary>2. ls : Used to list all files and directories</summary>
 <p>
 
 **Syntax:**
@@ -65,7 +68,7 @@ Example:
 ---
 
 <details>
-<summary>cd : Used to change directory</summary>
+<summary>3. cd : Used to change directory</summary>
 <p>
 
 **Syntax:**
@@ -98,7 +101,7 @@ Example:
 ---
 
 <details>
-<summary>cat : Used to display contents of file</summary>
+<summary>4. cat : Used to display contents of file</summary>
 
 <p>
 
@@ -131,7 +134,7 @@ Example:
 
 <details>
 
-<summary>touch : Used to create file</summary>
+<summary>5. touch : Used to create file</summary>
 
 <p>
 
@@ -161,7 +164,7 @@ Example:
 
 <details>
 
-<summary>cp : Used to copy file or directory</summary>
+<summary>6. cp : Used to copy file or directory</summary>
 
 <p>
 
@@ -198,7 +201,7 @@ Example:
 
 <details>
 
-<summary>mv : Used to move file or directory</summary>
+<summary>7. mv : Used to move file or directory</summary>
 
 <p>
 
@@ -243,7 +246,7 @@ Example:
 
 <details>
 
-<summary>rm : Used to remove file or directory</summary>
+<summary>8. rm : Used to remove file or directory</summary>
 
 <p>
 
@@ -287,7 +290,7 @@ Example:
 
 <details>
 
-<summary>man: manual command</summary>
+<summary>9. man: manual command</summary>
 
 <p>
 
@@ -307,7 +310,7 @@ man <command_name>
 
 <details>
 
-<summary>open: opens the file or directory specified </summary>
+<summary>10. open: opens the file or directory specified </summary>
 
 <p>
 
@@ -334,7 +337,7 @@ open .
 
 <details>
 
-<summary>df  : Used to check tha available disk space </summary>
+<summary>11. df  : Used to check tha available disk space </summary>
 
 <p>
 
@@ -359,7 +362,7 @@ df -h
 
 <details>   
 
-<summary>du  : Used to check tha size of a file or directory </summary>
+<summary>12. du  : Used to check tha size of a file or directory </summary>
 
 <p>
 
@@ -392,7 +395,7 @@ du -sh <directory_name>
 
 <details>
 
-<summary>grep: search for a string in a file</summary>
+<summary>13. grep: search for a string in a file</summary>
 
 <p>
 
@@ -481,7 +484,7 @@ Example:
 
 <details>
 
-<summary>chmod: change file permissions</summary>
+<summary>14. chmod: change file permissions</summary>
 
 <p>
 
@@ -544,7 +547,7 @@ chmod 644 <file_name>
 
 <details>
 
-<summary>find: find files and directories</summary>
+<summary>15. find: find files and directories</summary>
 
 <p>
 
@@ -658,7 +661,7 @@ Example:
 
 <details>
 
-<summary>tr : Used to translate characters </summary>
+<summary>16. tr : Used to translate characters </summary>
 
 <p>
 
@@ -706,7 +709,7 @@ tr -d 'a-z' < file_name > file_name2
 
 <details>
 
-<summary>head: Used to print top n number of lines for given input </summary>
+<summary>17. head: Used to print top n number of lines for given input </summary>
 
 <p>
 
@@ -745,7 +748,7 @@ head -n <number> <file_name> > <file_name2>
 
 <details>
 
-<summary>tail: Used to print last n number of lines for given input </summary>
+<summary>18. tail: Used to print last n number of lines for given input </summary>
 
 <p>
 
@@ -784,7 +787,7 @@ tail -n <number> <file_name> > <file_name2>
 
 <details>
 
-<summary>diff is used to display the differences in the files by comparing the files line by line</summary>
+<summary>19. diff is used to display the differences in the files by comparing the files line by line</summary>
 
 <p>
 
@@ -815,7 +818,7 @@ diff -y <file_name1> <file_name2>
 
 <details>
 
-<summary>history: history command is used to view previously executed commands</summary>
+<summary>20. history: history command is used to view previously executed commands</summary>
 
 <p>
 
@@ -841,7 +844,7 @@ history | grep <string>
 
 <details>
 
-<summary>alias: used to add alias to commands</summary>
+<summary>21. alias: used to add alias to commands</summary>
 
 <p>
 
@@ -873,7 +876,7 @@ alias <alias_name>='<command>' >> ~/.bashrc
 
 <details>
 
-<summary> wget : Used to download teh files from teh server</summary>
+<summary>22. wget : Used to download teh files from teh server</summary>
 
 
 <p>

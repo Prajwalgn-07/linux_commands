@@ -927,7 +927,7 @@ wget -c <url>
 
 <details>
 
-<summary>1. awk : Used to manipulate data files</summary>
+<summary>23. awk : Used to manipulate data files</summary>
 
 <p>
 
@@ -1009,7 +1009,7 @@ awk '{print $1,$2}' <file_name> | sort -n | uniq -c
 
 <details>
 
-<summary>2. sed : Used to manipulate data files</summary>
+<summary>24. sed : Used to manipulate data files</summary>
 
 <p>
 

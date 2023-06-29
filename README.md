@@ -1024,13 +1024,6 @@ sed 's/<string1>/<string2>/g' <file_name>
 
 ```console
 
-sed 's/<string1>/<string2>/g' <file_name> > <file_name2>
-```
-
-**It will replace all the occurences of <string1> with <string2> in the file <file_name> and save the output in file <file_name2>**
-
-```console
-
 sed 's/<string1>/<string2>/g' <file_name> | sort
 ```
 
@@ -1052,10 +1045,49 @@ sed 's/<string1>/<string2>/g' <file_name> | sort -n | uniq
 
 ```console
 
-sed 's/<string1>/<string2>/g' <file_name> | sort -n | uniq -c
+sed 's/<sting1>/<string2>' <file_name>
 ```
 
-**It will replace all the occurences of <string1> with <string2> in the file <file_name> and sort the output numerically and remove the duplicate lines and print the number of times each line is repeated**
+**It will replace the first occurence of <string1> with <string2> in the file <file_name>**
+
+```console
+
+sed 's/<sting1>/<string2>/2' <file_name>
+```
+
+**It will replace the second occurence of <string1> with <string2> in the file <file_name>**
+
+```console
+sed '3 s/<string1>/<string2>/' <file_name>
+```
+
+**It will replace the first occurence of <string1> with <string2> in the third line of the file <file_name>**
+
+```console
+sed  's/<string1>/<string2>/p' <file_name>
+```
+**It will replace all the occurences of <string1> with <string2> in the file <file_name> and print the replaced line twice**
+
+```console
+
+sed 'nd' <file_name>
+```
+
+**It will delete the nth line**
+
+```console
+
+sed '/<string>/d' <file_name>
+```
+
+**It will delete all the lines containing <string>**
+
+More examples:
+https://www.geeksforgeeks.org/sed-command-linux-set-2/
+
+**Example**
+
+![sed](img/sed.png)
 
 </p>
 

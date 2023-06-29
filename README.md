@@ -927,7 +927,7 @@ wget -c <url>
 
 <details>
 
-<summary>23. awk : Used to manipulate data files</summary>
+<summary>23. awk : A versatile text processing tool for extracting and manipulating data based on patterns and columns.</summary>
 
 <p>
 
@@ -1009,7 +1009,7 @@ awk '{print $1,$2}' <file_name> | sort -n | uniq -c
 
 <details>
 
-<summary>24. sed : Used to manipulate data files</summary>
+<summary>24. sed : A stream editor for searching, transforming, and modifying text based on regular expressions.</summary>
 
 <p>
 
@@ -1097,7 +1097,7 @@ https://www.geeksforgeeks.org/sed-command-linux-set-2/
 
 <details>
 
-<summary>25. cut : Used to manipulate data files</summary>
+<summary>25. cut :  A tool for extracting specific fields or columns from lines of text based on a delimiter.</summary>
 
 <p>
 

@@ -923,8 +923,258 @@ wget -c <url>
 </details>
 
 
+## Advanced Linux Commands
+
+<details>
+
+<summary>23. awk : A versatile text processing tool for extracting and manipulating data based on patterns and columns.</summary>
+
+<p>
+
+**Syntax:**
+
+```console
+
+awk '{print $1}' <file_name>
+```
+
+**It will print the first column of the file <file_name>**
+
+```console
+
+awk '{print $1,$2}' <file_name>
+```
+
+**It will print the first and second column of the file <file_name>**
+
+```console
+
+awk '{print $1,$2}' <file_name> > <file_name2>
+```
+
+**It will print the first and second column of the file <file_name> and save the output in file <file_name2>**
+
+```console
+
+awk '{print $1,$2}' <file_name> | sort
+```
+
+**It will print the first and second column of the file <file_name> and sort the output**
+
+```console
+
+awk '{print $1,$2}' <file_name> | sort -n
+```
+
+**It will print the first and second column of the file <file_name> and sort the output numerically**
+
+```console
+awk '{print NR,$0}' sample.txt
+```
+
+**It will print the line number and the line**
+
+```console
+awk '{print NF,$0}' sample.txt
+```
+
+**It will print the number of fields and the line**
+
+```console
+
+awk '{print $1,$2}' <file_name> | sort -n | uniq
+```
+
+**It will print the first and second column of the file <file_name> and sort the output numerically and remove the duplicate lines**
+
+```console
+
+awk '{print $1,$2}' <file_name> | sort -n | uniq -c
+```
+
+**It will print the first and second column of the file <file_name> and sort the output numerically and remove the duplicate lines and print the number of times each line is repeated**
 
 
+**Example**
+
+![awk](img/awk.png)
+
+
+</p>
+
+
+</details>
+
+---
+
+<details>
+
+<summary>24. sed : A stream editor for searching, transforming, and modifying text based on regular expressions.</summary>
+
+<p>
+
+**Syntax:**
+
+```console
+
+sed 's/<string1>/<string2>/g' <file_name>
+```
+
+**It will replace all the occurences of <string1> with <string2> in the file <file_name>**
+
+```console
+
+sed 's/<string1>/<string2>/g' <file_name> | sort
+```
+
+**It will replace all the occurences of <string1> with <string2> in the file <file_name> and sort the output**
+
+```console
+
+sed 's/<string1>/<string2>/g' <file_name> | sort -n
+```
+
+**It will replace all the occurences of <string1> with <string2> in the file <file_name> and sort the output numerically**
+
+```console
+
+sed 's/<string1>/<string2>/g' <file_name> | sort -n | uniq
+```
+
+**It will replace all the occurences of <string1> with <string2> in the file <file_name> and sort the output numerically and remove the duplicate lines**
+
+```console
+
+sed 's/<sting1>/<string2>' <file_name>
+```
+
+**It will replace the first occurence of <string1> with <string2> in the file <file_name>**
+
+```console
+
+sed 's/<sting1>/<string2>/2' <file_name>
+```
+
+**It will replace the second occurence of <string1> with <string2> in the file <file_name>**
+
+```console
+sed '3 s/<string1>/<string2>/' <file_name>
+```
+
+**It will replace the first occurence of <string1> with <string2> in the third line of the file <file_name>**
+
+```console
+sed  's/<string1>/<string2>/p' <file_name>
+```
+**It will replace all the occurences of <string1> with <string2> in the file <file_name> and print the replaced line twice**
+
+```console
+
+sed 'nd' <file_name>
+```
+
+**It will delete the nth line**
+
+```console
+
+sed '/<string>/d' <file_name>
+```
+
+**It will delete all the lines containing <string>**
+
+More examples:
+https://www.geeksforgeeks.org/sed-command-linux-set-2/
+
+**Example**
+
+![sed](img/sed.png)
+
+</p>
+
+</details>
+
+---
+
+<details>
+
+<summary>25. cut :  A tool for extracting specific fields or columns from lines of text based on a delimiter.</summary>
+
+<p>
+
+**Syntax:**
+
+```console
+
+cut -d '<delimiter>' -f <field_number> <file_name>
+```
+
+**It will print the <field_number> column of the file <file_name> with delimiter <delimiter>**
+
+```console
+
+cut -d '<delimiter>' -f <field_number1>,<field_number2> <file_name>
+```
+
+**It will print the <field_number1> and <field_number2> column of the file <file_name> with delimiter <delimiter>**
+
+```console
+cut -c <character_number> <file_name>
+```
+
+**It will print the <character_number> character of the file <file_name>**
+
+```console
+
+cut -c <character_number1>,<character_number2> <file_name>
+```
+
+**It will print the <character_number1> and <character_number2> character of the file <file_name>**
+
+```console
+
+cut -c <character_number1>-<character_number2> <file_name>
+```
+
+**It will print the characters from <character_number1> to <character_number2> of the file <file_name>**
+
+```console  
+
+
+cut -b <byte_number> <file_name>
+``` 
+
+**It will print the <byte_number> byte of the file <file_name>**
+
+```console
+
+cut -b <byte_number1>,<byte_number2> <file_name>
+```
+
+**It will print the <byte_number1> and <byte_number2> byte of the file <file_name>**
+
+```console
+
+cut -c 1- <file_name>
+```
+
+**It will print from the first character to the end of the file <file_name>**
+
+```console
+
+cut -c -<character_number> <file_name>
+```
+
+**It will print from the first character to the <character_number> character of the file <file_name>**
+
+**Example**
+
+![cut](img/cut.png)
+
+</p>
+
+</details>
+
+---
 
 
 

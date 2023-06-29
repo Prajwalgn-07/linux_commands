@@ -1095,6 +1095,86 @@ https://www.geeksforgeeks.org/sed-command-linux-set-2/
 
 ---
 
+<details>
+
+<summary>25. cut : Used to manipulate data files</summary>
+
+<p>
+
+**Syntax:**
+
+```console
+
+cut -d '<delimiter>' -f <field_number> <file_name>
+```
+
+**It will print the <field_number> column of the file <file_name> with delimiter <delimiter>**
+
+```console
+
+cut -d '<delimiter>' -f <field_number1>,<field_number2> <file_name>
+```
+
+**It will print the <field_number1> and <field_number2> column of the file <file_name> with delimiter <delimiter>**
+
+```console
+cut -c <character_number> <file_name>
+```
+
+**It will print the <character_number> character of the file <file_name>**
+
+```console
+
+cut -c <character_number1>,<character_number2> <file_name>
+```
+
+**It will print the <character_number1> and <character_number2> character of the file <file_name>**
+
+```console
+
+cut -c <character_number1>-<character_number2> <file_name>
+```
+
+**It will print the characters from <character_number1> to <character_number2> of the file <file_name>**
+
+```console  
+
+
+cut -b <byte_number> <file_name>
+``` 
+
+**It will print the <byte_number> byte of the file <file_name>**
+
+```console
+
+cut -b <byte_number1>,<byte_number2> <file_name>
+```
+
+**It will print the <byte_number1> and <byte_number2> byte of the file <file_name>**
+
+```console
+
+cut -c 1- <file_name>
+```
+
+**It will print from the first character to the end of the file <file_name>**
+
+```console
+
+cut -c -<character_number> <file_name>
+```
+
+**It will print from the first character to the <character_number> character of the file <file_name>**
+
+**Example**
+
+![cut](img/cut.png)
+
+</p>
+
+</details>
+
+---
 
 
 

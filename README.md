@@ -923,7 +923,145 @@ wget -c <url>
 </details>
 
 
+## Advanced Linux Commands
 
+<details>
+
+<summary>1. awk : Used to manipulate data files</summary>
+
+<p>
+
+**Syntax:**
+
+```console
+
+awk '{print $1}' <file_name>
+```
+
+**It will print the first column of the file <file_name>**
+
+```console
+
+awk '{print $1,$2}' <file_name>
+```
+
+**It will print the first and second column of the file <file_name>**
+
+```console
+
+awk '{print $1,$2}' <file_name> > <file_name2>
+```
+
+**It will print the first and second column of the file <file_name> and save the output in file <file_name2>**
+
+```console
+
+awk '{print $1,$2}' <file_name> | sort
+```
+
+**It will print the first and second column of the file <file_name> and sort the output**
+
+```console
+
+awk '{print $1,$2}' <file_name> | sort -n
+```
+
+**It will print the first and second column of the file <file_name> and sort the output numerically**
+
+```console
+awk '{print NR,$0}' sample.txt
+```
+
+**It will print the line number and the line**
+
+```console
+awk '{print NF,$0}' sample.txt
+```
+
+**It will print the number of fields and the line**
+
+```console
+
+awk '{print $1,$2}' <file_name> | sort -n | uniq
+```
+
+**It will print the first and second column of the file <file_name> and sort the output numerically and remove the duplicate lines**
+
+```console
+
+awk '{print $1,$2}' <file_name> | sort -n | uniq -c
+```
+
+**It will print the first and second column of the file <file_name> and sort the output numerically and remove the duplicate lines and print the number of times each line is repeated**
+
+
+**Example**
+
+![awk](img/awk.png)
+
+
+</p>
+
+
+</details>
+
+---
+
+<details>
+
+<summary>2. sed : Used to manipulate data files</summary>
+
+<p>
+
+**Syntax:**
+
+```console
+
+sed 's/<string1>/<string2>/g' <file_name>
+```
+
+**It will replace all the occurences of <string1> with <string2> in the file <file_name>**
+
+```console
+
+sed 's/<string1>/<string2>/g' <file_name> > <file_name2>
+```
+
+**It will replace all the occurences of <string1> with <string2> in the file <file_name> and save the output in file <file_name2>**
+
+```console
+
+sed 's/<string1>/<string2>/g' <file_name> | sort
+```
+
+**It will replace all the occurences of <string1> with <string2> in the file <file_name> and sort the output**
+
+```console
+
+sed 's/<string1>/<string2>/g' <file_name> | sort -n
+```
+
+**It will replace all the occurences of <string1> with <string2> in the file <file_name> and sort the output numerically**
+
+```console
+
+sed 's/<string1>/<string2>/g' <file_name> | sort -n | uniq
+```
+
+**It will replace all the occurences of <string1> with <string2> in the file <file_name> and sort the output numerically and remove the duplicate lines**
+
+```console
+
+sed 's/<string1>/<string2>/g' <file_name> | sort -n | uniq -c
+```
+
+**It will replace all the occurences of <string1> with <string2> in the file <file_name> and sort the output numerically and remove the duplicate lines and print the number of times each line is repeated**
+
+</p>
+
+</details>
+
+---
 
 
 
